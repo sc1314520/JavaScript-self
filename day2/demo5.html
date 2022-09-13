@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            /*
+                && || 非布爾值情況
+                    先將其轉為布爾值，然後再運算，並且返回後者。
+            */
+            // true && true
+            var result = 1 && 2;
+            console.log(result); // 2 <-- 返回後者。
+
+            // false && true
+            result = 0 && 2;
+            console.log(result); // 0 <-- 返回 false 者。
+
+            // false && false <-- 返回前者
+            result = 0 && NaN;
+            console.log(result); // 0
+
+            result = NaN && 0;
+            console.log(result); // NaN
+
+            result = 1 || 2; 
+            console.log(result); // 1
+
+            result = 0 || 2; 
+            console.log(result); // 2
+
+            result = "" || "hello"; 
+            console.log(result); // hello
+
+            result = " " || "hello"; 
+            console.log(result); // " "
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

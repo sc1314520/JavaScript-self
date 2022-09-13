@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            三種邏輯運算符：
+                ！ 非 --> 對一個布爾值進行取反
+                     --> 非布爾值運算，則會先將數據轉為布爾值以後進行運算。
+                     --> 可以將其他數據類型轉換為布爾類型。
+                && 與
+                     
+                || 或
+        */
+        var result = true && false;
+        console.log(result); // false
+        result = true && true;
+        console.log(result); // true
+
+        true && alert("執行第二個值"); // 會檢查第二個
+        false && alert("執行第二個值"); // 不會檢查第二個
+
+        true || alert("執行第二個值"); // 不會檢查第二個
+        false || alert("執行第二個值"); // 會檢查第二個
+
+
+        result = true||false;
+        console.log(result); // true
+        result = false||false;
+        console.log(result); // false
+
+        var a=true;
+        console.log(!a); // false
+
+        var b=10;
+        b=!!b; // 取兩次反
+        console.log(b); // true
+        console.log(typeof b); // boolean
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

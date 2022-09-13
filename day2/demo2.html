@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            一元運算符： 只需要一個操作數
+            +  正號 : 不會產生任何影響。 --> 可以用來轉型。
+            -  負號 : 可以對數字進行負號的取反。
+            對於非 Number類型的值：
+                會先轉換為 Number 然後再運算。
+        */
+       var a=123;
+       a=+a;
+       console.log("a="+a);
+       console.log(typeof a); // 123
+       a=-a;
+       console.log("a="+a);
+       console.log(typeof a); // -123
+
+        a=true;
+        a=-a;
+        console.log("a="+a); // -1
+        console.log(typeof a); // boolean
+
+        a='18';
+        a=-a;
+        console.log("a="+a); // -18
+        console.log(typeof a); // string
+
+        var result =1+ +"2" +3;
+        console.log(result); // 6
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -46,6 +46,52 @@
         console.log(a); // 123456
         console.log(typeof a); // string
 
+        // 利用空字串來將任意數據類型轉換為 String
+        var c=123;
+        c=c+"";
+        console.log(typeof c);//string
+        console.log(c);//123
+
+        // 運算順序
+        c=1+2+"3";
+        console.log("result = "+c); //result = 33
+
+        c="1"+2+3;
+        console.log("result = "+c) //result = 123
+
+        // 除了加法以外，其餘皆轉換為 Number --> 可以作為類型轉換的方法。
+        c=55-5;
+        console.log(c); //50
+        c=100-true;
+        console.log(c);//99
+        c=100-"1";
+        console.log(c);//99
+
+        c=2*2;
+        console.log(c); //4
+
+        c=2*'8';
+        console.log(c); //16
+
+        c=2*undefined;
+        console.log(c);// NaN
+
+        c=2*null;
+        console.log(c); //0
+
+        c=4/2;
+        console.log(c); //2
+        c=3/2;
+        console.log(c); //1.5
+
+        var d ="123";
+        d=d-0;
+        console.log(typeof d); // number
+        console.log(d); // 123
+
+        // % 取餘數
+        console.log(9%3); // 0
+        console.log(3%2); // 1
     </script>
 </head>
 <body>

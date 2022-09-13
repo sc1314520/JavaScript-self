@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            自增
+                - 通過自增可以使變量自身基礎上增加1
+                - 對於變量自增以後，原變量會立即增加1
+                - 後++ (a++) 前++ (++a)
+                    無論是何者，都會立即始原變量的值自增1
+                        不同的是 a++ 和 ++a 的值不同。
+                    a++ 等於原變量的值（自增前的值）
+                    ++a 等於後變量的值（自增後的值）
+            自減
+                - 通過自減可以使變量自身基礎上減少1
+                - 對於變量自減以後，原變量會立即減少1
+                - 後-- (a--) 前-- (--a)
+                無論是何者，都會立即始原變量的值自減1
+                        不同的是 a-- 和 --a 的值不同。
+                    a-- 等於原變量的值（自減前的值）
+                    --a 等於後變量的值（自減後的值）
+        */
+        var a=1;
+        a=a+1;
+        console.log(a); //2
+
+        a=1;
+        a++;
+        console.log(a); //2
+
+        a=1;
+        ++a;
+        console.log(a); //2
+
+        var b=0;
+        console.log(b++); // 0
+        console.log(++b); // 2
+
+        var d=20;
+        var result =d++ + ++d + d; // 20+22+22
+        console.log(result); // 64
+
+        var e =20;
+        e=e++;
+        console.log(e); // 20
+
+        var num=10;
+        num--;
+        console.log(num);//9
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

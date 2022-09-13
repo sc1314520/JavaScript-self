@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+
+        console.log(5>10); // false
+        console.log(5>5); // false
+        console.log(5>=5); // true
+        console.log(4<=4); // true
+
+        /*
+            非數值比較
+                會將其轉換為數值再進行比較
+
+                如果兩側為字串，不會將其轉換為數字進行比較，而會分別比較 Unicode 編碼。
+        */
+        console.log(1>true); // false
+        console.log(1>=true); // true
+        console.log(1>"0"); // true
+        console.log(10>null); // true
+
+        // 任何值與 NaN 比較皆為 false
+        console.log(10>NaN); // false
+        console.log(10>="hello"); // false
+
+        console.log(true>false); //true
+
+        // Unicode 編碼比較
+        console.log("1"<"5"); // true
+        console.log("11">"5"); // false <-- 特殊情況
+        console.log("a"<"b"); // true
+
+
+        // 一位一位進行比較。
+        // 若兩位相同，則比較下一位。
+        console.log("abc"<"b"); // true
+        console.log("bbc"<="b"); // false
+
+        // 比較字串型態的數字一定要轉型
+        console.log("11"> +"5"); // true <-- 特殊情況
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
