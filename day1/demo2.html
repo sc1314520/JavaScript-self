@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 可以將js 代碼寫在 script 標籤-->
+    <script>
+        //alert("我是script標籤中的代碼。");
+
+    </script>
+     <!-- 可以將js 代碼寫在 js 文件後，利用 script 標籤引入-->
+     <script src="demo2.js">
+        //一但引入外部文件(src)，就不能在內部寫代碼。
+        // 必須創建新的 script 標籤才可繼續撰寫。
+        alert("我是內部js代碼。"); // 可撰寫但不執行。
+     </script>
+</head>
+<body>
+    <!-- 可以將 js 代碼編寫到 onclick 屬性中-->
+    <button onclick="alert('討厭，你點我幹嘛～～');">點我一下</button>
+    
+    <!-- 也可以將 js 寫在 href 屬性中-->
+    <a href="javascript:alert('讓你點，你就點。');">你也點我一下</a>
+</body>
+</html>

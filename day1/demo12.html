@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var a=123;
+
+        console.log(a);
+
+        /*
+            如果需要表示 16 進制的數字，則須以 0x 開頭。
+            8 進制 以 0 開頭。
+            2 進制 以 0b 開頭。
+        */
+        a=0x10;
+        console.log(a); //16
+        a=0xff;
+        console.log(a); //255
+        a=0xCafe;
+        console.log(a); //51966
+
+        a=070;
+        console.log(a); //56
+
+        a=0b10;
+        console.log(a); //2
+
+        // 有些瀏覽器會當成8進制或10進制解析。
+        a="070";
+        a=parseInt(a,10); // 第二參數為進制。
+        console.log(a); // 70
+        console.log(typeof a); // number
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

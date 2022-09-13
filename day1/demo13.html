@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            將其他數據類型轉換為 Boolean
+                - 使用 Boolean() 函數。
+                    -數字 -->布爾
+                        除了 0 和 NaN，其餘都是 true
+                    -字串 -->布爾
+                        除了空串，其餘都是 true
+                    -對象也會轉為true
+        */
+        var a =123;
+        a=Boolean(a);
+        console.log(typeof a);
+        console.log(a); // true
+        a=-123;
+        a=Boolean(a);
+        console.log(a); // true
+        a=0;
+        a=Boolean(a);
+        console.log(a); // false
+        a=Infinity;
+        a=Boolean(a);
+        console.log(a); // true
+
+
+        a="hello";
+        a=Boolean(a);
+        console.log(a); // true
+
+        a="true";
+        a=Boolean(a);
+        console.log(a); // true
+
+        a="false";
+        a=Boolean(a);
+        console.log(a); // true
+
+        a="";
+        a=Boolean(a);
+        console.log(a); // false
+
+        a=" ";
+        a=Boolean(a);
+        console.log(a); // true
+
+        a=null;
+        a=Boolean(a);
+        console.log(a); // false
+
+        a=undefined;
+        a=Boolean(a);
+        console.log(a); // false
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

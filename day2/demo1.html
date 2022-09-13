@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            運算符也叫操作符
+                通過運算符可以對一個或多個值進行運算
+                比如： typeof 就是運算符，可以來獲得一個值的類型。
+                      他會以字串形式返回。
+            算術運算符： 
+                當對非 Number 類型的值進行運算時，會將這些值轉換為 Number。
+                若兩個字串相加，則會拼接在一起。
+                任何值與字串加法運算，都會先轉換為字串，再進行拼接。
+                + - * / %
+        */
+        var a=123;
+
+        var result = typeof a;
+
+        console.log(result); // string
+        console.log(typeof a); // number
+
+        a= a+1;
+        console.log(a);//124
+
+        a=true+1;
+        console.log(a); //2
+
+        // true =1 false=0
+        a=true+false;
+        console.log(a); //1
+
+        // null=0
+        a= 2+null;
+        console.log(a); //2
+
+        // 與 NaN 運算皆為 NaN
+        a=2+NaN;
+        console.log(a); //NaN
+
+        a="123"+"456";
+        console.log(a); // 123456
+        console.log(typeof a); // string
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            字面量：都是一些不可改變的值。
+                比如：1 2 3 4 5
+            字面量都是可以直接使用，但是我們一般都不會直接使用字面量。
+        */
+        // alert(12231231321313); // 直接使用
+
+        /*
+            變量：變量可以用來保存字面量，而且變量的值是可以任意改變的。
+                 變量更加方便我們使用，所以在開發中都會通過變量去保存一個字面量。
+                 可以通過變量對字面量進行描述。
+
+            x=123123123131;
+
+            聲明變量：
+            在 js 中使用 var 聲明一個變量
+        */
+        var a;
+        console.log(a); // "undefined"
+
+        // 為變量賦值
+        a= 123;
+        a= 456;
+        console.log(a); // "456"
+        
+        // 聲明和賦值同時進行
+        var b=789;
+        var c=0;
+        console.log(b);
+        console.log(c);
+
+        var age =80;
+    </script>
+</body>
+</html>

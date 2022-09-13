@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        標示符
+            - 在 JS 中所有的可以由我們自主命名的都可以稱為標示符。
+            - 例如： 變量名，函數名，屬性名
+            - 命名規則：
+                1. 可以含有字母，數字，_，＄
+                2. 不能以數字開頭。
+                3. 標示符不可為 ES 中的關鍵字或保留字。
+                4. 標示符一般都採用駝峰命名法。
+                   helloWorld
+            - ES 底層是保存標示符時實際上是採用 Unicode 編碼，
+                所以理論上來說，所有 utf-8 內的都可以當標示符（中文可行）。
+        */
+       var a_1_$=123;
+       console.log(a_1_$);
+
+       var helloWorld=456;
+       console.log(helloWorld);
+
+       var 你好="hello";
+       console.log(你好);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        將其他數據類型轉換為 Number
+            轉換方式一：
+                使用 Number()函數
+                    - 字串轉數字
+                        1. 純數字 -> 直接轉換為數字
+                        2. 字串有非數字 -> 轉換為 NaN
+                        3. 如果字串為空串或一個全是空格的字串-> 轉換為 0
+                    - 布爾轉數字
+                        1. true=1
+                        2. false=0
+                    - null 轉數字為 0 
+                    - undefined 轉數字為 NaN 
+                轉換方式二： 專門用來對付字串
+                    - parseInt() 把字串轉換為整數。
+                        可以將字串中的有效整數內容取出，然後轉換為Number
+                    - parseFloat() 把字串轉換為浮點數。
+                        與前者相似，但可以取得有效小數。
+                    - 如果對非 String 使用，則會先將其轉換為String，然後再操作。
+        */
+        var a ="123";
+        console.log(a);
+        console.log(typeof a); // string
+
+        a=Number(a);
+        console.log(a);
+        console.log(typeof a); // number
+
+        a="abc";
+        a=Number(a);
+        console.log(a); // NaN
+        console.log(typeof a); // number
+
+        a="";
+        a=Number(a);
+        console.log(a); // 0
+        console.log(typeof a); // number
+
+        a=true;
+        a=Number(a);
+        console.log(a); // 1
+        console.log(typeof a); // number
+
+        a=false;
+        a=Number(a);
+        console.log(a); // 0
+        console.log(typeof a); // number
+
+        a=null;
+        a=Number(a);
+        console.log(a); // 0
+        console.log(typeof a); // number
+
+        a=undefined;
+        a=Number(a);
+        console.log(a); // 0
+        console.log(typeof a); // number
+
+        a="123px";
+        a=parseInt(a);
+        console.log(a); // 123
+        console.log(typeof a); // number
+
+        a="a123px";
+        a=parseInt(a);
+        console.log(a); // NaN
+        console.log(typeof a); // number
+
+        a="123.a567px";
+        a=parseInt(a);
+        console.log(a); // 123
+        console.log(typeof a); // number
+
+        a="123.567px";
+        a=parseInt(a);
+        console.log(a); // 123
+        console.log(typeof a); // number
+
+        a="123.567px";
+        a=parseFloat(a);
+        console.log(a); // 123.567
+        console.log(typeof a); // number
+
+        a=true;
+        a=parseInt(a);
+        console.log(a); // NaN
+        console.log(typeof a); // number
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
