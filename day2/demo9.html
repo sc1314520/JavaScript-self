@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            條件運算符也叫三元運算符
+                語法：
+                    條件表達式?語句1:語句2;
+                -執行流程：
+                    true:執行語句1
+                    false:執行語句2
+        */
+        // true?alert("語句1"):alert("語句2"); --> 語句1
+
+        var a=10;
+        var b=20;
+        var c=30;
+
+        a>b?alert("a大"):alert("b大");
+
+        var max = a>b?a:b;
+        console.log(max); //20
+
+        max =max>c?max:c;
+        console.log(max); //30
+
+
+        var max =a>b? a>c? a:c : b>c?b:c;
+        console.log(max)
+
+        "hello"?alert("語句1"):alert("語句2"); // 語句1
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

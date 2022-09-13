@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            比較兩者是否相等
+
+            使用 == 來做相等運算
+                當使用 == 來比較兩值時，如果值的類型不同，
+                則會自動進行類型轉換，將其轉為相同的類型，
+                然後再比較。轉換方式不一定。
+            不相等
+                - 使用 != 作為不相等運算。
+                - 不相等也會自動類型轉換
+            
+            === 全等 
+                - 用來判斷兩個值是否全等，不會自動類型轉換。
+                - 類型不同，直接返回 false
+
+            !== 不全等
+        */
+        console.log(1==1); // true
+        
+        var a=10;
+        console.log(a==4); // false
+
+        console.log("1"==1); // true
+
+        console.log(true=="1"); // true  <-- 兩者皆轉成 Number
+
+        console.log(null==0); // false 
+
+        /*
+            undefined 衍生自 null 
+        */
+        console.log(undefined==null); // true
+
+        // NaN 不和任何值相等，包含本身。
+        console.log(NaN==NaN); // false
+
+        var b=NaN;
+
+        // 判斷 b 是否為 NaN --> 可以通過 isNaN()判斷。
+        console.log(isNaN(b)); // true
+
+        console.log(10!=5); // true
+        console.log("abcd"!="abcd"); //false
+        console.log(1!="1"); // false
+
+        console.log("123"===123); // false
+        console.log(undefined===null); //false
+        console.log("123"!==123); // true
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

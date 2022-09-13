@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            ,運算符
+                使用 , 可以分割多個語句，一班可以在聲明多個變量時使用。
+        */
+        // 同時聲明多個變量並賦值
+        var a=1,b=2,c=3;
+        //alert(b); //2
+
+        /*
+            JS運算優先級：
+                比如：先乘除，後加減
+        */
+        var result = 1+2*3; // 7
+
+        /*
+            如果||的優先級高，或者兩者一樣高，則返回 3
+            如果&&的優先級高，則應該返回 1
+
+            優先級一樣，則由左往右運算。
+            可以使用()來改變優先級。
+        */
+        var result = 1 || 2 && 3 
+        console.log(result); // false --> && 優先級高
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
