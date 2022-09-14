@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 水仙花
+            for(var i=100;i<1000;i++){
+            var x= parseInt(i/100);
+            var y= parseInt((i%100)/10);
+            var z= parseInt((i%10));
+            if(i==Math.pow(x,3)+Math.pow(y,3)+Math.pow(z,3)){
+                document.write("x= "+x+" y= "+y+" z= "+z+" i="+i+"<br/>");
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

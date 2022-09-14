@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 可以彈出一個提示框，可以在文本框中輸入內容。
+        var x = prompt("請輸入成績:");
+        if(x<=100 && x>=0 && !isNaN(x)){ // isNaN() 用於檢查其参数是否是『非数字值』 數字返回 false ，非數字返回 true
+            if(x==100){
+            document.write("等第為A+");
+            }
+            else if(x>=80){
+                document.write("等第為B");
+            }
+            else if(x>=60){
+                document.write("等第為C");
+            }
+            else{
+                document.write("等第為F");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
