@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 優化
+        console.time("test"); // 用來開啟計時器; 參數為計時器的名稱。
+        for(var i=2;i<=20000;i++){
+            var flag=true;
+            for(var j=2;j<=Math.sqrt(i);j++){ // 效能提高。
+                if(i%j==0){
+                    flag=false;
+                    break; // 效能提高。
+                }
+            }
+            if(flag){
+                document.write(i+"<br/>");
+            }
+        }
+        console.timeEnd("test");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

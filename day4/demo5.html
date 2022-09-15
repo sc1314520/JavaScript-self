@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // break 只能用在 switch 和 loop
+        for(var i=1;i<=5;i++){
+            document.write(i+"<br/>");
+
+            if(i==3)
+                break; // 立即終止離他最近的循環。
+        }
+
+
+        
+        for(var i=0;i<=5;i++){
+            document.write("外層循環："+i+" ");
+            for(var j=0;j<=5;j++){
+                document.write("內層循環："+j+" ");
+                if(j==2){
+                    break;
+                }
+            }
+            document.write("<br/>");
+        }
+
+        
+        z:
+        for(var i=0;i<=5;i++){
+            document.write("外層循環："+i+" ");
+            for(var j=0;j<=5;j++){
+                document.write("內層循環："+j+" ");
+                if(j==4){
+                    break z; // 直接跳出外層循環。
+                }
+            }
+            document.write("<br/>");
+        }
+        document.write("<br/>");
+
+
+        for(var i=1;i<=5;i++){
+
+            if(i==3)
+                continue; //跳過當次最近循環
+
+                document.write(i+"<br/>");
+        }
+
+        document.write(i+"<br/>");
+
+        z:
+        for(var i=0;i<=5;i++){
+            document.write("<br/>");
+            document.write("外層循環："+i+" ");
+            for(var j=0;j<=5;j++){
+                document.write("內層循環："+j+" ");
+                if(j==4){
+                    continue z; // 直接跳出當次外層循環。
+                }
+            }
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
