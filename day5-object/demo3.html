@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 基本數據類型
+        var a=1;
+        var b=a;
+
+        a++;
+
+        console.log(a); // 2
+        console.log(b); // 1
+
+        // 引用數據類型
+        var obj=new Object();
+
+        obj.name="jane";
+        var obj2 =obj;
+        obj.name="john";
+
+        console.log(obj.name); // john
+        console.log(obj2.name); // john
+
+        obj2=null;
+        console.log(obj); // [Object object]
+        console.log(obj2); // null
+
+
+
+        // 比較
+        var c=10;
+        var d=10;
+        console.log(c==d); //true
+
+        var obj3=new Object();
+        var obj4=new Object();
+
+        obj3.name="ace";
+        obj4.name="ace";
+
+        //判斷位置
+        console.log(obj3==obj4); // false
+        // 判斷 name
+        console.log(obj3.name==obj4.name); //true
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

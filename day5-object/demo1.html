@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 創建對象
+        var obj =new Object();
+
+        // 向對象中添加屬性
+        obj.name= "貂蟬";
+        obj.age= 18;
+        obj.sex="female";
+
+        console.log(obj);
+
+        // 讀取對象中的屬性
+        document.write("姓名："+obj.name+"<br/>");
+        document.write("年齡："+obj.age+"<br/>");
+        document.write("性別："+obj.sex+"<br/>");
+
+        document.write(obj.hello+"<br/>"); // 未定義，返回 undefined
+
+        // 修改對象的屬性值
+        obj.name= "妲己";
+        obj.age= 20;
+        obj.sex="female";
+
+        // 刪除
+        delete obj.sex;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

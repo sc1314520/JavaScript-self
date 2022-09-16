@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function isOu(num){
+            return num%2==0;
+        }
+        console.log(isOu(3)); // false
+
+
+        function area(r){
+            return Math.PI*Math.pow(r,2);
+        }
+        console.log(area(10));
+
+
+        function p(name,age,sex,address){
+            console.log("name= "+name+" age= "+age+" sex= "+sex+" address= "+address);
+        }
+        p("ace",20,"male","Taiwan");
+
+
+        var obj={
+            name:"bcd",
+            age:19,
+            sex:"male",
+            address:"Canada"
+        };
+
+        function p2(o){ // 傳參可以是對象，也可以是一個函數
+            console.log("name= "+o.name+" age= "+o.age+" sex= "+o.sex+" address= "+o.address)
+        }
+        p2(obj);
+        
+        function cal(f){
+            //console.log(f);
+            f(obj); // name= bcd age= 19 sex= male address= Canada
+        }
+        cal(p2);
+
+        function cal2(f){
+            f();
+        }
+        cal2(function(){alert("hello")}); // 匿名函數
+
+
+
+        /*
+            p2 : 
+                - 函數對象
+                - 相當於直接使用函數對象
+            p2(o): 
+                - 調用函數
+                - 相當於使用函數返回值
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

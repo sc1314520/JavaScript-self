@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var obj =new Object();
+
+        obj.name ="貂蟬";
+        obj.var ="hello";  // 不強制要求遵守標示符的規範。
+
+        // 特殊屬性名
+        obj["123"]=789;
+        console.log(obj["123"]); // 789
+
+        var n ="333";
+        obj[n]=789;
+        console.log(obj[n]); // 789
+
+
+        // 任意屬性類型，也可以是一個對象
+        obj.test="hello";
+        obj.test=true;
+        obj.test=null;
+        obj.test=undefined;
+
+        var obj2=new Object();
+        obj2.name="妲己";
+        obj.test=obj2;
+        console.log(obj.test.name); // 妲己
+
+        // 檢查是否含有屬性 有則返回 true
+        console.log("age" in obj2); // false
+        console.log("name" in obj2); // true
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

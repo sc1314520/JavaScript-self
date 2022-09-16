@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(){
+            alert("函數要執行了");
+
+            for(var i=0;i<5;i++){
+                console.log(i);
+
+                if(i==2){
+                    break; // 退出當前循環。
+                    // continue --> 用於跳出當次循環。
+                    // return --> 結束整個函數。
+                }
+            }
+            alert("函數執行完了");
+        }
+        fun();
+
+
+        function fun2(){
+            var obj={name:"ace"};
+            return obj;
+        }
+        var a =fun2();
+        console.log(a);
+
+
+        function fun3(){
+            function fun4(){
+                alert("我是 fun4");
+            }
+            return fun4;
+        }
+        a=fun3();
+        console.log(a);
+        //呼叫一
+        a();
+        //呼叫二
+        fun3()();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

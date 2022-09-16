@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 構造函數來創建一個函數對象
+        // 函數 --> 也是一個對象，可以封裝功能
+        var fun =new Function("console.log('這是我的第一個函數');");  // 不會立即執行 --> 調用時才會。
+        console.log(typeof fun); // function
+
+        //調用函數
+        fun(); // 這是我的第一個函數
+
+
+        // 函數聲明來創建一個函數對象
+        function fun2(){
+            console.log("這是我的第二個函數");
+            alert("haha");
+            document.write("(>_<)");
+        }
+        fun2(); // 這是我的第二個函數
+
+        // 函數表達式創建法
+        var fun3 = new function(){
+            console.log("我是匿名函數");
+        }; // 我是匿名函數
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
