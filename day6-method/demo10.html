@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(){
+            document.write(this.name+'<br/>');
+        };
+        function Person(name,age,sex){
+            this.name=name;
+            this.age=age;
+            this.sex=sex;
+            this.getName=fun;
+        }
+        var per =new Person("ace",20,"male");
+        var per2 =new Person("bcd",21,"male");
+        per.getName();
+        console.log(per.getName==per2.getName); // true <-- 同一個方法只需創建一次。
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

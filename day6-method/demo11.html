@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function Person(){
+
+        }
+        function MyClass(){
+
+        }
+        console.log(Person.prototype); // Object
+        console.log(MyClass.prototype); // Object
+        console.log(Person.prototype==MyClass.prototype);//false
+
+
+        MyClass.prototype.a=123;
+        var mc =new MyClass();
+        var mc2 =new MyClass();
+        console.log(mc.__proto__ == MyClass.prototype); // true
+        console.log(mc.a); // 123
+        console.log(mc2.a); // 123
+        mc.a="我是mc中的a";
+        console.log(mc.a); // 我是mc中的a
+        console.log(mc2.a); // 123
+
+        MyClass.prototype.getName=function(){
+            alert("hello");
+        }
+        mc.getName();
+        mc2.getName();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

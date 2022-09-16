@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function fun(){
+            // this 指向的是一個對象。
+            console.log(this);
+            //console.log(a+','+b);
+        }
+
+        var obj={
+            name:"ace",
+            getName:fun
+        };
+        console.log(obj.getName==fun); // true
+        obj.getName(); // {name: 'ace', getName: ƒ}
+        fun(); // Window
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

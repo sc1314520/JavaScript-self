@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 全局作用域
+
+
+        function fun(){
+            console.log("hello");
+        }
+        
+
+        var a=123; // 全域變數會作為 window 對象的屬性保存
+        console.log(window.a);
+        window.fun();
+
+
+        // 不會被提前聲明
+        window.b=234;
+        console.log(b);
+
+        // 會報錯！！
+        //console.log(c);
+        //c=555; 
+
+        // var 會在所有代碼執行前被聲明，但如果聲明變量時，不使用 var 關鍵字，則變量不會被聲明提前。
+        console.log(d); // undefined
+        var d =345;
+
+        fun2(); 
+
+        function fun2(){ // 提前聲明，且以賦值。（會提前創建函數）
+            console.log("fun2");
+        }
+
+        var fun3 = function(){ // 會提前聲明，但沒有賦值。（不會提前創建函數）
+            console.log("fun3");
+        }
+
+        fun3();
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

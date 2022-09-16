@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var a=10;
+
+        // 函數作用域
+        function fun(){
+            var b=20;
+            // console.log(a); //10
+            var a="我是函數中的變量 a";
+            console.log(a); //我是函數中的變量 a  <--(找離最近的變量)。
+
+            function fun2(){
+                console.log(window.a); // 10 <-- 全局變量
+                console.log(a); // 我是函數中的變量 a  <-- 由內往外找。
+            }
+            fun2();
+        }
+        // console.log(b); --> 報錯
+        fun();
+
+
+        function fun3(){
+            console.log(a); // undefined
+            var a=35; // 聲明提前
+        }
+        fun3();
+
+
+        var c=33;
+        function fun4(){
+            console.log(c); // 33
+            c=5; // 這會賦值給全域的 c ;
+        }
+        fun4();
+        console.log(c); // 5
+
+        var e =23;
+        function fun6(e){ //<--函數作用域聲明變量
+            alert(e); // undefined
+        }
+        fun6(); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
