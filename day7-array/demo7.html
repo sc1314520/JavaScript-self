@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var  arr =["aaa","bbb","ccc","ddd","eee"];
+        // slice(start,end) --> 提取指定元素。
+        console.log(arr.slice(0,2)); // ['aaa', 'bbb']  <-- 不含 end。
+
+        console.log(arr.slice(1)); // ['bbb', 'ccc', 'ddd', 'eee'] <-- 從 1 開始以後都要。
+
+        console.log(arr.slice(1,-1)); // ['bbb', 'ccc', 'ddd'] <--負值代表倒數第幾個。
+
+
+        // splice(start,num,param) --> 可以刪除數組中的指定元素，將被刪除的數組返回。並將數組添加新元素。
+        console.log(arr.splice(0,2,"kkk","lll")); // ['aaa', 'bbb']
+        console.log(arr); // ['kkk', 'lll', 'ccc', 'ddd', 'eee'] // 替換
+
+        arr.splice(1,0,"xxx","yyy","zzz"); // 不刪除。
+        console.log(arr); // ['kkk', 'xxx', 'yyy', 'zzz', 'lll', 'ccc', 'ddd', 'eee'] // 從指定起始位置後增加新元素。
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

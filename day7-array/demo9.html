@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Array API
+        var arr=["aaa","bbb","ccc"];
+        var arr2=["ddd","eee","fff"];
+        var arr3=["ggg","hhh","iii"];
+        
+        // concat() 連接兩個或多個數組。 --> 該方法不會直接影響原數組。
+        arr = arr.concat(arr2,arr3);
+        console.log(arr); // ['aaa', 'bbb', 'ccc', 'ddd', 'eee', 'fff', 'ggg', 'hhh', 'iii']
+        
+        // join() 將數組轉換為字串。
+        var result = arr.join("~~");
+        console.log(result); // aaa~~bbb~~ccc~~ddd~~eee~~fff~~ggg~~hhh~~iii
+    
+        // reverse() 反轉數組
+        arr.reverse();
+        console.log(arr); // ['iii', 'hhh', 'ggg', 'fff', 'eee', 'ddd', 'ccc', 'bbb', 'aaa']
+    
+    
+        // sort() 數組排序 --> 按照 unicode 排序
+        var arr4 = ["a","b","d","c","e"];
+        arr4.sort();
+        console.log(arr4); //  ['a', 'b', 'c', 'd', 'e']
+        arr4.reverse();
+        console.log(arr4); // ['e', 'd', 'c', 'b', 'a']
+    
+        // 數字排序 --> 按照 unicode 排序，可能會得到錯誤結果
+        var arr5 =[3,4,5,11,6,7];
+        arr5.sort();
+        console.log(arr5); // [11, 3, 4, 5, 6, 7]
+        // 自訂規則
+        arr5.sort(function(a,b){
+            return a-b; // 升序
+            // return b-a; // 降序
+        });
+        console.log(arr5); // [3, 4, 5, 6, 7, 11]
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //forEach()
+        var arr =["aaa","bbb","ccc","ddd"];
+        
+        // 需要函數作為參數 --> 為回調函數
+        // 陣列中有幾個元素，就會執行幾次函數。
+        arr.forEach(function(a,b,c){
+            console.log(a); // 當前 value： aaa,bbb,ccc,ddd
+            console.log(b); // 當前 index: 0,1,2,3
+            console.log(c); // 整體：['aaa', 'bbb', 'ccc', 'ddd']
+        });
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

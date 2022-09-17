@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 創建
+        var arr =new Array();
+
+        console.log(typeof arr); // object
+
+        // 添加
+        arr[0]=10;
+        arr[1]=11;
+        arr[2]=12;
+        arr[4]=14;
+        console.log(arr); //  [10, 11, 12, , 14]
+        console.log(arr[3]); // undefined
+        console.log(arr.length); // 5
+
+        // 修改length
+        arr.length=10;
+        console.log(arr.length); // 10
+
+        arr.length=3;
+        console.log(arr); // [10, 11, 12]  <-- 大於長度的元素會被刪除
+        console.log(arr.length); // 3
+
+        // 向數組最後一個位置添加元素
+        arr[arr.length]=70;
+        arr[arr.length]=80;
+        arr[arr.length]=90;
+
+        console.log(arr); // [10, 11, 12, 70, 80, 90]
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

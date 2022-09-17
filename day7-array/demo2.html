@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 創建一
+        var arr=new Array();
+        // 創建二
+        var arr2 =[];
+
+        var arr3=[1,2,3,4,5,10];
+
+        console.log(arr3); // [1, 2, 3, 4, 5, 10]
+
+        // 創建三
+        var arr4 =new Array(10,20,30);
+        console.log(arr4); // [10, 20, 30]
+
+        // 差別（只有一個參數）
+        var arr5=[10]; // 創建只有一個參數的陣列
+        var arr6=new Array(10); // 創建長度為10的陣列
+
+
+        // 任意數據類型
+        var arr7=["hello",1,true,undefined,null];
+        var obj={name:'ace'};
+        arr7[arr7.length]=obj;
+
+        console.log(arr7); // ['hello', 1, true, undefined, null, {…}]
+
+
+        var arr8=[{name:'ace'},{name:'bcd'},{name:'fff'}];
+
+        // 函數
+        var arr9=[function(){document.write(1)},function(){document.write(2)}];
+        arr9[0]();
+
+        // 二維陣列
+        arr10=[[1,2,3],[4,5,6],[7,8,9]];
+        console.log(arr10[1]); // [4, 5, 6]
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

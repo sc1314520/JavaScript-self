@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var arr=["ace","bcd","eee"];
+
+        // 末尾添加 push() --> 可添加一個或多個元素，並返回陣列新長度。
+        var result = arr.push("fgh","iii");
+        console.log(result); // 5
+        console.log(arr); // ['ace', 'bcd', 'eee', 'fgh', 'iii']
+
+        // 末尾刪除 pop() --> 刪除數組最後一個元素，並返回刪除的元素。
+        var result = arr.pop();
+        console.log(result); // iii
+        console.log(arr); // ['ace', 'bcd', 'eee', 'fgh']
+
+        // unshift() --> 首部新增一個或多個元素，並返回陣列新長度。
+        var result3 = arr.unshift("ccc","ddd");
+        console.log(result3); // 6
+        console.log(arr); // ['ccc', 'ddd', 'ace', 'bcd', 'eee', 'fgh']
+
+        // shift() --> 首部刪除一個元素，並返回被刪除的元素。
+        var result4 = arr.shift();
+        console.log(result4); // ccc
+        console.log(arr); // ['ddd', 'ace', 'bcd', 'eee', 'fgh']
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
