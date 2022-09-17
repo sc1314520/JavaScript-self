@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 創建一
+        var reg = new RegExp();
+        // 創建二
+        var reg2 = /a/i;
+        
+        var str="Asdfff";
+        var result = reg2.test(str);
+        console.log(result); // true
+
+
+        var reg3=/a|b|c/i;
+        str="asdascasberw";
+        var result = reg3.test(str);
+        console.log(result); // true
+
+        // [] 也是「或」的關係。
+        var reg4=/[A-z]/i; //表示 a~z & A~Z
+        str="asdascasberw";
+        var result = reg4.test(str);
+        console.log(result); // true
+
+        var reg5=/a[bde]c/i; 
+        str="aec";
+        var result = reg5.test(str);
+        console.log(result); // true
+
+        //[^ab] 除了 ab
+        var reg6=/[^ab]/i; 
+        str="abbba";
+        var result = reg6.test(str);
+        console.log(result); // false
+
+        var reg7=/[0-9]/i; 
+        str="abbba123";
+        var result = reg7.test(str);
+        console.log(result); // true
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var str="1a2b3c5d6f7";
+        var result=str.split(/[a-z]/); // 無需全局也會拆分完畢。
+        console.log(result); //  ['1', '2', '3', '5', '6', '7']
+
+        str="hello abc hello aec hello afc";
+        result=str.search(/a[bef]c/); // 沒有則返回 -1 // 只會查找第一個，設全局也沒用。
+        console.log(result); // 6
+
+        str="1a2b3c5d6f7";
+        result=str.match(/[a-z]/gi);  // 全局（匹配到所有內容）+忽略大小寫
+        console.log(result); //  ['a', 'b', 'c', 'd', 'f']
+        console.log(typeof result); // object
+        console.log(Array.isArray(result)); // true
+        console.log(result[2]); // c
+
+        // replace(old,new);
+        result=str.replace("a","@_@");
+        console.log(result); // 1@_@2b3c5d6f7
+
+        str="1a2a3a5d6f7";
+        result=str.replace(/a/g,"@_@");
+        console.log(result); // 1@_@2@_@3@_@5d6f7
+
+        result=str.replace(/[a-z]/gi,"");
+        console.log(result); // 123567
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var reg=/./; // 表示任意字符
+        console.log(reg.test("!213qdw~#$%^&*")); // true
+
+
+        reg=/\.\\/;
+        console.log(reg.test("b")); // false
+        console.log(reg.test("b.\\")); // true
+
+        reg=new RegExp("\\.");
+        console.log(reg); // /\./
+
+        /*
+            \w - 任意字母、數字、_
+            \W - 除了字母、數字、_
+            \d - 任意數字
+            \D - 除了數字
+            \s - 空格
+            \S - 除了空格
+            \b - 單詞
+            \B - 除了單詞
+        */
+        
+        reg=/\bchild\b/;
+        console.log(reg.test("hello children")); // false
+        console.log(reg.test("hello child ren")); // true
+
+        var str="     hello my baby    ";
+        str = str.replace(/^\s*|\s*$/g,"");
+        console.log(str); // hello my baby
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
