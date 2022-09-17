@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(){
+            alert(this);
+        }
+        //fun();
+
+        // call(),apply() --> 都會調用函數執行，可以將一個對象指定為第一個對象。對象會成為函數執行時的this。
+        var obj={
+            name:"obj",
+            getName:function(){
+                alert(this.name);
+            }
+        };
+        var obj2={
+            name:"obj2"
+        };
+        fun.apply(obj.name); // obj
+        fun.call(obj2.name); // obj2
+        
+
+        obj.getName(); // obj
+        obj.getName.apply(obj2); // obj2
+
+
+
+        function fun2(a,b){
+            console.log("a="+a);
+            console.log("b="+b);
+        }
+        fun2.call(obj,5,10);  // call() 可以將實參在對象之後依次傳遞。
+        fun2.apply(obj,[5,10]); // apply() 則需要封裝到陣列中。
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

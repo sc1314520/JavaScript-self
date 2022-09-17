@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var num =new Number(3);
+        var num2 =new Number(3);
+        var str =new String("hello");
+        var bool =new Boolean(true);
+        var bool2 =true;
+        console.log(num);
+        console.log(str);
+        console.log(bool);
+        console.log(typeof num); // object
+        console.log(typeof str); // object
+        console.log(typeof bool); // object
+
+        num.hello="abcde";
+        console.log(num.hello);//abcde
+
+
+        console.log(num==num2);// false --> 比較地址
+        console.log(bool==bool2); // true --> 自動類型轉換
+
+
+
+        var b =new Boolean(false); // 對象轉成布林都是 true
+        if(b){ 
+            document.write("我運行了！");
+        }
+
+
+        var s=123;
+        s=s.toString();
+        console.log(s);
+        console.log(typeof s); // string
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var d =new Date(); // 當前代碼執行的時間
+        console.log(d); 
+
+        // 創建一個指定時間的對象
+        var d2=new Date("12/03/2016 11:10:30");
+        console.log(d2); // Sat Dec 03 2016 11:10:30 GMT+0800 (台北標準時間)
+        
+        var date =d2.getDate(); // 當前對象的日期
+        console.log(date); // 3
+
+        var day =d2.getDay();
+        console.log(day); // 6 <-- 星期六   (星期日為 0)  // 0~6
+
+        var month =d2.getMonth();
+        console.log(month); // 11 <-- 獲取當前時間對象的月份 0~11  --> 11 表示12月
+
+        var year =d2.getFullYear();
+        console.log(year); // 2016
+
+
+        var time =d2.getTime();
+        console.log(time); // 1480734630000 ms <-- 從 1970/1/1 00:00:00 開始
+        
+        var d3 =new Date("1/1/1970 0:0:0");
+        console.log(d3.getTime()); // -28800000 東 8 區 時間
+
+
+
+
+        // 計時
+        var start=Date.now();
+        console.log(start); 
+
+        for(var i=0;i<100;i++){
+            console.log(i);
+        } 
+
+        var end =Date.now();
+
+        console.log(end-start); // 2ms
+
+
+
+        
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

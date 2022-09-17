@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str ="hello";
+        // 底層是字符數組
+        console.log(str.length);// 5
+        console.log(str[3]); // l   // 空格也算
+        console.log(str.charAt(1)); // e   // 空格也算
+        console.log(str.charCodeAt(1)); // 101 <-- e 的 unicode 編碼。
+
+        // formCharCode() 根據字符編碼去獲取字符
+        var result =String.fromCharCode(65);
+        console.log(result); // A
+
+        // concat()
+        str =str.concat(" hello"," hi");
+        console.log(str); // hello hello hi
+
+        //indexOf() 檢索字符串是否有指定內容  // 沒有則返回 -1
+
+        result=str.indexOf("hi");
+        console.log(result); // 12 在第12個首次出現。
+        
+        console.log(str.indexOf("h",1)); // 6    // 從 index=1 開始查找。
+        console.log(str.lastIndexOf("h",5)); // 12 // 由後往前找  只找到index=5 5以前的則省略。
+
+
+        // slice(start,end)
+        str ="abcdefghi";
+        console.log(str.slice(0,4)); // abcd (不含結束位置) 
+        console.log(str.slice(1)); // bcdefghi // 第二參數可省略
+        console.log(str.slice(1,-1));// bcdefgh  // -1 倒數第一個
+
+
+        // substring(start,end) --> 不可接收負值 --> 會默認使用 0 ，此外會自動調整參數位置。
+        console.log(str.substring(0,4)); // abcd
+        console.log(str.substring(1,0)); // a
+
+        // substr(start,num)
+        str="abcdefg";
+        console.log(str.substr(1,2)); // bc 
+
+
+        // split()
+        str="abc,def,ghi,jk";
+        var x =str.split(",");
+        console.log(x); // ['abc', 'def', 'ghi', 'jk']
+        console.log(Array.isArray(x));// true
+        console.log(x[0]);//abc
+
+        //toLowerCase() ,toUpperCase()
+        console.log(str.toUpperCase()); //ABC,DEF,GHI,JK
+        console.log(str.toLowerCase()); // abc,def,ghi,jk
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
