@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            // 獲取 body 標籤
+            var body =document.getElementsByTagName("body")[0];
+            console.log(body);
+
+            var body =document.body;
+            console.log(body);
+
+            // 獲取 html 標籤
+            var html = document.documentElement;
+            console.log(html);
+
+
+            // 獲取頁面中所有元素
+            var all = document.all;
+            console.log(all); //  [html, head, meta, meta, meta, title, script, body, script#__bs_script__, script, viewport: meta, __bs_script__: script#__bs_script__]
+            console.log(all.length); // 10
+            console.log(typeof all); // undefined
+
+            all=document.getElementsByTagName("*");
+            console.log(all); //  [html, head, meta, meta, meta, title, script, body, script#__bs_script__, script, viewport: meta, __bs_script__: script#__bs_script__]
+
+
+            // 根據元素的 class 屬性值查詢一組元素節點對象
+            var box1 = document.getElementsByClassName("box1");
+            console.log(box1.length);  // 3
+
+
+            var divs =document.getElementsByTagName("div");
+            console.log(divs.length); //4
+
+
+            // document.querySelector() --> 只找第一個
+            var div=document.querySelector(".box1 div");
+            console.log(div.innerHTML); // 我是第一個 box1 中的 div
+
+            // document.querySelectorAll() --> 返回數組
+            var box1 =document.querySelectorAll(".box1 div");
+            console.log(box1[1].innerHTML); // 我是第二個 box1 中的 div
+
+            
+
+        }
+    </script>
+</head>
+<body>
+    <div class="box1">
+        <div>我是第一個 box1 中的 div</div>
+    </div>
+    <div class="box1">
+        <div>我是第二個 box1 中的 div</div>
+    </div>
+    <div class="box1">
+        <div>我是第三個 box1 中的 div</div>
+    </div>
+
+</body>
+</html>
