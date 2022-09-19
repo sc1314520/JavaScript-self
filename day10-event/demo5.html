@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            // 綁定多個同一事件 --> 都會執行
+            var btn01=document.getElementById("btn01");
+            // btn01.onclick=function(){
+            //     alert(1);
+            // };
+
+            btn01.addEventListener("click",function(){
+                alert(1);
+            },false); // 第三個函數為獲取階段時是否觸發事件，一般都是 false
+            btn01.addEventListener("click",function(){
+                alert(2);
+            },false);
+            btn01.addEventListener("click",function(){
+                alert(3);
+            },false);
+
+
+            // // attachEvent()  --> 只有 IE 8 才有的，而且是反向執行 (6,5,4)
+            // btn01.attachEvent("onclick",function(){
+            //     alert(4);
+            // });
+            // btn01.attachEvent("onclick",function(){
+            //     alert(5);
+            // });
+            // btn01.attachEvent("onclick",function(){
+            //     alert(6);
+            // });
+
+            bind(btn01,"click",function(){
+                alert(1);
+            });
+        };
+
+        function bind(obj,eventStr,callback){
+            // 大部分
+            if(obj.addEventListener){
+                obj.addEventListener(eventStr,callback,false);
+            }
+            else{
+                
+                
+
+                // IE8
+                obj.attachEvent("on"+eventStr,function(){
+                    // 更改 this 指向
+                    callback().call(obj);
+                });
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <button id="btn01">點我一下</button>
+</body>
+</html>

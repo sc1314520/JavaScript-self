@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            var btn01=document.getElementById("btn01");
+            var u1=document.getElementById("u1");
+            
+            var allA=document.getElementsByTagName("a");
+            btn01.onclick=function(){
+                var li =document.createElement("li");
+                li.innerHTML="<a href='javascript:;' class='link'>新建超連接</a>";
+                u1.appendChild(li);
+                
+            };
+
+            // 冒泡應用 -->事件只需綁定一次，子類別都可以使用。（事件委派）
+            u1.onclick=function(event){
+                event=event||window.event;
+
+                // alert(event.target); // 點誰就是誰
+                // 如果觸發事件的對象為期望的對象則執行，否則不執行。
+                if(event.target.className=="link"){
+                    alert("a");
+                }
+                
+            };
+
+
+
+            // // 為原始的每一個超連結都綁定事件
+            // var allA=document.getElementsByTagName("a");
+            // for(var i=0;i<allA.length;i++){
+            //     allA[i].onclick=function(){
+            //         alert("我是a");
+            //     };
+            // }
+        };
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <button id="btn01">添加超連結</button>
+    <ul id="u1">
+        <li><a href="javascript:;" class="link">超連接一</a></li>
+        <li><a href="javascript:;" class="link">超連接二</a></li>
+        <li><a href="javascript:;" class="link">超連接三</a></li>
+    </ul>
+</body>
+</html>

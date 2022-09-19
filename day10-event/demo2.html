@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+
+            var box1 =document.getElementById("box1");
+
+            window.onmousemove=function(event){
+
+                // clientX,Y 是獲取當前可見頁面的座標
+                
+                
+                // 獲取鼠標座標
+                     var x=event.pageX;
+                     var y=event.pageY;
+
+                // 設置 div 座標
+                box1.style.left=x+"px";
+                box1.style.top=y+"px";
+            };
+
+        };
+    </script>
+    <style>
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body style="height:1000px; width: 2000px;">
+    <div id="box1"></div>
+</body>
+</html>
