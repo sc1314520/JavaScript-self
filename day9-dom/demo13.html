@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            var info=document.getElementById("info");
+            var inputs=document.getElementsByTagName("input");
+            // onscroll 當元素滾動條滾動時觸發
+            info.onscroll=function(){
+                if(info.scrollHeight-info.scrollTop == info.clientHeight){
+                    inputs[0].disabled=false;
+                    inputs[1].disabled=false; 
+                }
+            };
+        };
+    </script>
+    <style>
+        #info{
+            width: 300px;
+            height: 500px;
+            background: #bfa;
+            overflow: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>歡迎親愛的用戶註冊</h3>
+    <p id="info">
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷  
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+        請閱讀以下協議：切記一定要好好閱讀，不然不可以註冊唷
+
+
+    </p>
+    我已仔細閱讀協議<input type="checkbox" name="" id="checkbox" disabled="disabled">
+    <input type="submit" value="註冊" disabled="disabled">
+</body>
+</html>
