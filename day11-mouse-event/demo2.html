@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+
+            var box1=document.getElementById("box1");
+         
+
+            box1.onmousedown=function(event){
+            
+                // div 偏移量
+                event=event||window.event;
+
+                var ol=event.clientX-box1.offsetLeft;
+                var ot=event.clientY-box1.offsetTop;
+
+                document.onmousemove=function(event){
+                    event=event||window.event;
+
+                    var x =event.clientX-ol;
+                    var y =event.clientY-ot;
+
+                    box1.style.left=x+"px";
+                    box1.style.top=y+"px";
+                };
+
+                // 若綁給 box1 則在 box2 上放下時，會失效
+                document.onmouseup=function(){
+                document.onmousemove=null; // 取消事件
+                document.onmouseup=null;
+                
+                // 針對 IE8
+                // box1.releaseCapture();
+                
+            };
+            };
+            // 解除默認
+            return false;
+
+            // 針對 IE8 
+            // box1.setCapture(); // 把下一次所有的鼠標事件補獲到自己身上。
+        };
+    </script>
+    <style>
+
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+
+        #box2{
+            width: 100px;
+            height: 100px;
+            left: 200px;
+            top:200px;
+            background-color:yellow;
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>

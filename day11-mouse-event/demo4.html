@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+
+            var box1 =document.getElementById("box1");
+
+            box1.onmousewheel=function(event){
+                event=event||window.event;
+                
+                // 獲取鼠標滾動方向 --> 向上滾是正值 向下是負值  // 不看大小只看正負
+                if(event.wheelDelta>0){
+                   box1.style.height=box1.clientHeight-10+"px";
+                }
+                else{
+                    box1.style.height=box1.clientHeight+10+"px";
+                }
+
+                // 取消網頁滾動條默認
+                return false;
+                // 監聽是用 preventDefault()
+            };
+
+
+        };  
+    </script>
+</head>
+<body style="height: 2000px;">
+    <div id="box1"></div>
+</body>
+</html>

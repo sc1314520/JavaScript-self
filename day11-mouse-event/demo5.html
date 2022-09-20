@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            // onkeydown --> 按下按鍵
+            // onkeyup --> 鬆開按鍵
+            // 鍵盤事件綁定給 可獲取焦點的對象或document
+
+            document.onkeydown=function(event){
+                event=event||window.event
+
+
+                // 判斷 y 和 ctrl 是否同時被按下
+                if(event.keyCode==89 && event.ctrlKey){
+                    console.log("ctrl+y");
+                }
+            };
+
+            document.onkeyup=function(){
+                
+            };
+
+            var input=document.getElementsByTagName("input")[0];
+            input.onkeydown=function(event){
+                event=event||window.event;
+                
+                // 文本框中不能輸入數字
+                if(event.keyCode>=48 && event.keyCode<=57){
+                    return false; //取消默認
+                }
+
+            };
+
+        };
+    </script>
+    <style></style>
+</head>
+<body>
+    <!-- div 不可綁定鍵盤事件-->
+    <div style="width: 100px; height:100px; background-color:red;"></div>
+
+    <input type="text">
+</body>
+</html>
