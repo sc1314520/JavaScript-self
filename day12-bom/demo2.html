@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 返回歷史紀錄中的長度
+        console.log(history.length);
+
+        window.onload=function(){
+            var btn=document.getElementById("btn");
+            btn.onclick=function(){
+                // back() 回退到上一個頁面
+                // history.back();
+
+                // forward 跳轉到下一個頁面
+                // history.forward();
+
+                // go() 可以用來跳轉到指定頁面，需要整數作為參數。
+                // 1 表示向前跳轉一個頁面...
+                // -1 表示向後跳轉一個頁面...
+                history.go(-1);
+            };
+        };
+    </script>
+</head>
+<body>
+    <a href="demo2-test01.html">test01</a>
+    <a href="demo2-test02.html">test02</a>
+
+    <button id="btn">點我一下</button>
+</body>
+</html>

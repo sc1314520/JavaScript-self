@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // BOM 可以對瀏覽器進行操作
+        /*
+            Window --> 整個瀏覽器的窗口，也是網頁中的全局對象。
+            Navigator --> 當前瀏覽器的信息，可以來識別不同的瀏覽器。
+            Location --> 當前瀏覽器地址欄，可以獲取地址欄信息，或操作瀏覽器跳轉頁面。
+            History --> 瀏覽器歷史紀錄，可以操作瀏覽器的歷史紀錄。不能或得到具體的歷史紀錄。 --> 只能操作瀏覽器向前或向後，並且只在當次訪問時有效。
+            Screen --> 代表用戶屏幕信息，獲取用戶的顯示器的相關信息。
+
+            以上都是 window 對象的屬性。
+        */
+
+        // 取得瀏覽器名稱 --> 由於歷史原因，回傳為網景公司 Netscape --> 無法再識別瀏覽器。
+        console.log(navigator.appName);
+
+        // 一般來說，會使用此方法來判別瀏覽器。 --> 返回字串。
+        console.log(navigator.userAgent);
+
+        var ua=navigator.userAgent;
+        if(/firefox/.test(ua)){
+            console.log("火狐瀏覽器");
+        }
+        else if(/Chrome/i.test(ua)){
+            console.log("Chrome瀏覽器");
+        }
+        else if(/MSIE/i.test(ua)){ // IE 10 以下
+            console.log("IE瀏覽器");
+        }
+
+        // 若不能判斷，還可以通過一些瀏覽器中特有的對象來判斷。
+        /*  
+            ActiveXObject --> IE獨有的
+        */
+    //    if(window.ActiveXObject){ //  11 以後返回false
+    //     alert("IE瀏覽器");
+    //    }
+    //    else{
+    //     alert("不是 IE");
+    //    }
+        if("ActiveXObject" in window){
+            alert("IE瀏覽器");
+        }
+        else{
+            alert("不是 IE");
+        }
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

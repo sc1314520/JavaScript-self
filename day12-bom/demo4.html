@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 定時器
+        window.onload=function(){
+            var count =document.getElementById("count");
+
+            // 自動切換
+            
+                
+            var num=1;
+            // 定時調用 (function(),ms) --> 返回值為一個 Number
+            var timer=setInterval(function(){
+                    num++;
+                    count.innerHTML=num;
+                    
+                    if(num==20)
+                    clearInterval(timer); // 關閉定時器。
+                },1000);
+            };
+            console.log(timer); // 作為定時器的唯一標示。
+
+            
+    </script>
+</head>
+<body>
+    <h1 id="count">1</h1>
+</body>
+</html>
