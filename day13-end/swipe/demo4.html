@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/tools.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #outer{
+            width: 520px;
+            height: 333px;
+            margin: 50px auto;
+            background-color: yellowgreen;
+            padding: 10px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        #imgList{
+            list-style: none;
+            position: absolute;   
+            left: 0;  
+        }
+        #imgList li{
+            float: left;
+            margin: 0 10px;
+        }
+
+        #navDiv{
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+        }
+        #navDiv a{
+            float: left;
+            width: 15px;
+            height: 15px;
+            background-color: red;
+            margin: 0 5px;
+            opacity: 0.5;
+            
+        }
+        #navDiv a:hover{
+            background-color: black;
+        }
+    </style>
+    <script>
+
+        window.onload=function(){
+
+            var imgList=document.getElementById("imgList");
+            var imgArr=document.getElementsByTagName("img");
+
+            imgList.style.width=520*imgArr.length+"px";
+
+            var navDiv=document.getElementById("navDiv");
+            var outer=document.getElementById("outer");
+            navDiv.style.left= ((outer.offsetWidth - navDiv.offsetWidth)/2)+"px";
+
+
+            var index =0;
+            var allA =document.getElementsByTagName("a");
+            allA[index].style.backgroundColor="black";
+
+            for(var i=0;i<allA.length;i++){
+                allA[i].num=i;
+                allA[i].onclick=function(){
+                    index=this.num;
+                    console.log(this.num);
+                    move(imgList,"left",-520*index,20,function(){});
+                    setA();
+                };
+            }
+           
+            // 創建方法設置選中 a
+            function setA(){
+                for(var i=0;i<allA.length;i++){
+                    allA[i].style.backgroundColor=""; // 內聯樣式權重高於 hover ，所以只能設為空串，再交給原本 CSS 所設定的顏色。
+                }
+                allA[index].style.backgroundColor="black";
+            } 
+        };
+
+    </script>
+</head>
+<body>
+    <div id="outer">
+        <ul id="imgList">
+            <li><img src="img/1.jpg" alt=""></li>
+            <li><img src="img/2.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/4.jpg" alt=""></li>
+            <li><img src="img/5.jpg" alt=""></li>
+        </ul>
+        <div id="navDiv">
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </div>
+</body>
+</html>

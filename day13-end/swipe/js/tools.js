@@ -24,34 +24,12 @@ function move(obj,attr,target,speed,callback){
        },30);
 
     };
-    
-
-
-
-
-    function addClass(obj,cn){
-        if(!hasClass(obj,cn)){
-            obj.className+=" "+cn;
+    function getStyle(obj,name){
+        // window.getComputedStyle 是屬性
+        // getComputedStyle 是變量 --> IE8 會報錯
+        if(window.getComputedStyle){ // 有此屬性則返回 true
+            return getComputedStyle(obj,null)[name];
         }
-    }
+        return getcurrentStyle[name];
 
-    function removeClass(obj,cn){
-        var reg=new RegExp("\\b"+cn+"\\b");
-
-        obj.className=obj.className.replace(reg,"");
-    }
-    function hasClass(obj,cn){
-        // 判斷有沒有 cn 這個 class
-        var reg=new RegExp("\\b"+cn+"\\b");
-        console.log(reg);
-        return reg.test(obj.className);
-    }
-
-    function toggleClass(obj,cn){
-        if(hasClass(obj,cn)){
-            removeClass(obj,cn);
-        }
-        else{
-            addClass(obj,cn);
-        }
     }

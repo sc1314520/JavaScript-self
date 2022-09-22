@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .b2{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+        .b3{
+            background-color: yellow;
+        }
+    </style>
+    <script>
+
+        window.onload=function(){
+            var btn01=document.getElementById("btn01");
+            var box=document.getElementById("box");
+
+            btn01.onclick=function(){
+                
+                toggleClass(box,"b3");
+            };
+        };
+        function addClass(obj,cn){
+            if(!hasClass(obj,cn)){
+                obj.className+=" "+cn;
+            }
+        }
+
+        function removeClass(obj,cn){
+            var reg=new RegExp("\\b"+cn+"\\b");
+
+            obj.className=obj.className.replace(reg,"");
+        }
+        function hasClass(obj,cn){
+            // 判斷有沒有 cn 這個 class
+            var reg=new RegExp("\\b"+cn+"\\b");
+            console.log(reg);
+            return reg.test(obj.className);
+        }
+
+        function toggleClass(obj,cn){
+            if(hasClass(obj,cn)){
+                removeClass(obj,cn);
+            }
+            else{
+                addClass(obj,cn);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="btn01">點擊修改樣式</button>
+    <br><br>
+    <div id="box" class="b1"></div>
+</body>
+</html>
