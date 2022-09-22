@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="tools.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #box1{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 0;
+        }
+
+        #box2{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            top:200px;
+            position: absolute;
+            left: 0;
+            
+        }
+    </style>
+    <script>
+       
+        window.onload=function(){
+
+            var box1=document.getElementById("box1");
+            var box2=document.getElementById("box2");
+            var btn01=document.getElementById("btn01");
+            var btn02=document.getElementById("btn02");
+            var btn03=document.getElementById("btn03");
+            var btn04=document.getElementById("btn04");
+            btn01.onclick=function(){
+            
+                move(box1,"left",800,10);
+
+            };
+
+            btn02.onclick=function(){
+            
+                move(box1,"left",0,10);
+
+            };
+
+            btn03.onclick=function(){
+                move(box2,"left",800,10.2);
+            };
+
+            btn04.onclick=function(){
+                move(box2,"height",400,10.2,function(){
+                    move(box2,"width",400,10,function(){
+                        move(box2,"height",100,10,function(){
+                            move(box2,"width",100,10,function(){
+                                
+                            });
+                        });
+                    });
+                });
+            };
+
+
+        };  
+        function getStyle(obj,name){
+            // window.getComputedStyle 是屬性
+            // getComputedStyle 是變量 --> IE8 會報錯
+            if(window.getComputedStyle){ // 有此屬性則返回 true
+                return getComputedStyle(obj,null)[name];
+            }
+            return getcurrentStyle[name];
+
+        }
+
+        
+
+    </script>
+</head>
+<body>
+    <button id="btn01"> box1 向右移動</button>
+    <button id="btn02"> box1 向左移動</button>
+    <button id="btn03"> box2 向右移動</button>
+    <button id="btn04"> 測試</button>
+    <br><br>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>
